@@ -21,7 +21,7 @@
   </div>
   <div class="field">
     <%= f.label :price %><br>
-    <%= f.number_field :price %>
+    <%= f.number_field :price,{value: 0} %>
   </div>
   <div class="field">
     <%= f.label :publish %><br>
@@ -33,7 +33,7 @@
   </div>
   <div class="field">
     <%= f.label :cd %><br>
-    <%= f.check_box :cd %>
+    <%= f.check_box :cd,{checked: true} %>
   </div>
   <div class="actions">
     <%= f.submit %>
