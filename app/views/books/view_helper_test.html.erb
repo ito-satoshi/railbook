@@ -8,10 +8,5 @@
 <br><%= link_to 'Back', books_path %></br>
 <br><%= text_area :book, :memo %></br>
 <br><%= select :user, :address, ["出雲市","松江市"] %></br>
-<br>
-<select id="book_publish" name="book[publish]">
-  <option value="1">技術評論社</option>
-  <option value="2">マイナビ</option>
-</select>
-</br>
+<br><%= collection_select :user, :like, Book.all, :id, :title %></br>
 <br><%= image_tag 'i.JPG' %></br>
