@@ -24,12 +24,12 @@
     <%= f.number_field :price %>
   </div>
   <div class="field">
-    <%= f.label :publish %><br>
-    <%= f.text_field :publish %>
+    <%= f.label :publish_id %><br>
+    <%= collection_select :book, :publish_id,  Publish.all, :id, :publishname, :include_blank => true %>
   </div>
   <div class="field">
     <%= f.label :published %><br>
-    <%= collection_select :book, :publish, Publish.all, :publishname, :publishname, :include_blank => true %>
+    <%= f.date_select :published %>
   </div>
   <div class="field">
     <%= f.label :cd %><br>
