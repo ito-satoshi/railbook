@@ -21,7 +21,7 @@
   </div>
     <div class="field">
     <%= f.label :user_id %><br>
-    <%= collection_select :review, :user_id,  User.all, :id, :username, :include_blank => true %>
+    <%= collection_select :review, :user_id,  User.all, :id, :username %>
   </div>
   <div class="actions">
     <%= f.submit %>
