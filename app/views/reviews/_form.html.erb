@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :book_id %><br>
-    <%= collection_select :review, :book_id,  Book.all, :id, :title, :include_blank => true %>
+    <%= f.collection_select :book_id,  Book.all, :id, :title %>
   </div>
   <div class="field">
     <%= f.label :body %><br>
@@ -21,7 +21,7 @@
   </div>
     <div class="field">
     <%= f.label :user_id %><br>
-    <%= collection_select :review, :user_id,  User.all, :id, :username %>
+    <%= f.collection_select :user_id,  User.all, :id, :username %>
   </div>
   <div class="actions">
     <%= f.submit %>
