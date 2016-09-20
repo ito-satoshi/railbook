@@ -1,4 +1,5 @@
 ﻿class LoginController < ApplicationController
+  layout false
   skip_before_action :check_logined
   def index
 #    session[:usr] = nil

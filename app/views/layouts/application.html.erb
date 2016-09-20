@@ -6,16 +6,16 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= image_tag 'railbook.png' %>
-    <ul>
-      <li><%= link_to '書籍一覧', books_path %></li>
-      <li><%= link_to '出版社一覧', publishes_path %></li>
-      <li><%= link_to 'レビュー一覧', reviews_path %></li>
-      <li><%= link_to 'ユーザー一覧', users_path %></li>
-    </ul>
-    <div align="right">
-      <%= "ログインユーザー:#{session[:usrname]}" %> |
-      <%= link_to "ログアウト", login_index_path %>
-    </div>
+      <ul>
+        <li><%= link_to '書籍一覧', books_path %></li>
+        <li><%= link_to '出版社一覧', publishes_path %></li>
+        <li><%= link_to 'レビュー一覧', reviews_path %></li>
+        <li><%= link_to 'ユーザー一覧', users_path %></li>
+      </ul>
+      <div align="right">
+        <%= "ログインユーザー:#{session[:usrname]}" %> |
+        <%= link_to "ログアウト", login_index_path %>
+      </div>
   </head>
   <body>
     <%= yield %>
