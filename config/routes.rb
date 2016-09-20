@@ -1,16 +1,19 @@
 Rails.application.routes.draw do
   get 'login/index'
-
   post 'login/auth'
-
+#  delete 'login/index'
   resources :users
   resources :books
   resources :reviews
   resources :publishes
   resources :listings
   resources :books do
-    post 'search', on:  :collection
+    post 'search', on: :collection
   end
+#  resources :login do
+#    delete 'logout', on: :collection
+#  end
+
   #resources :books
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

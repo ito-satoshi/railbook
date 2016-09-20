@@ -12,8 +12,11 @@
       <li><%= link_to 'レビュー一覧', reviews_path %></li>
       <li><%= link_to 'ユーザー一覧', users_path %></li>
     </ul>
+    <div align="right">
+      <%= "ログインユーザー:#{session[:usrname]}" %> |
+      <%= link_to "ログアウト", login_index_path %>
+    </div>
   </head>
-
   <body>
     <%= yield %>
   </body>
